@@ -7,9 +7,9 @@ Gem::Specification.new do |s|
   s.version     = Bramipsum::VERSION
   s.authors     = ["Ricardo Caldeira"]
   s.email       = ["ricardo.nezz@gmail.com"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.homepage    = "http://www.ricardocaldeira.com"
+  s.summary     = %q{Generate one or more dummy sentences taken from Bram Stoker's Dracula}
+  s.description = %q{Random sentences from Bram Stoker's Dracula}
 
   s.rubyforge_project = "bramipsum"
 
