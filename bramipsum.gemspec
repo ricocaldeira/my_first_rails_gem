@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split($\)
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
-  s.name          = "bramipsum"
+  s.name          = "bramipsum-caldeira-test"
   s.require_paths = ["lib"]
   s.version       = Bramipsum::VERSION
   s.add_development_dependency 'rake'
