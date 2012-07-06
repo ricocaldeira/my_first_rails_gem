@@ -11,14 +11,12 @@ Gem::Specification.new do |s|
   s.summary     = %q{Generate one or more dummy sentences taken from Bram Stoker's Dracula}
   s.description = %q{Random sentences from Bram Stoker's Dracula}
 
-  s.rubyforge_project = "bramipsum"
-
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = `git ls-files`.split($\)
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.name          = "bramipsum"
   s.require_paths = ["lib"]
-
-  # specify any dependencies here; for example:
-  # s.add_development_dependency "rspec"
-  # s.add_runtime_dependency "rest-client"
+  s.version       = Bramipsum::VERSION
+  s.add_development_dependency 'rake'
+  
 end
